@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "socketIoFirstSurprise": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "socketIoFirstSurprise"
+    }
+  },
+  "defaultProject": "socketIoFirstSurprise",
+  "cli": {
+    "analytics": "29d14f5a-3cf4-4e92-8a92-f36eec412ebd"
+  }
 }
