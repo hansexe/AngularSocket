@@ -14,20 +14,17 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(){
-    this.WebSocketService.listen('listen').subscribe((data)=>{
-      console.log(data);
-    })
+    var bodyjson = 
+    [{"nombre_socket" : "chat message", 
+      "id": 1, 
+      "nombre":"queso"
+    }]
 
-    this.WebSocketService.listen('chat message').subscribe((data)=>{
-     console.log(data);
-    })
+    this.WebSocketService.emitir('evento_socket', bodyjson );
 
-    // this.WebSocketService.listen('productos').subscribe((data)=>{
-    //   console.log(data);
-    // })
 
-    // this.WebSocketService.emitir('nuevo_productos', [{"id": 1, "nombre":"queso"}]);
-
+    this.WebSocketService.emitir('chat message', "funcionaaaaa");
+   
   }
 
 }

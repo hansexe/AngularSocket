@@ -9,7 +9,7 @@ export class WebSocketService {
 
 
   socket : any;
-  readonly url: string = "http://127.0.0.1:3120";
+  readonly url: string = "http://192.168.1.74:3120";
 
   constructor() {
     this.socket = io(this.url);
@@ -24,7 +24,7 @@ export class WebSocketService {
   }
 
   emitir(eventname : any, data : any){
-    this.socket.emit(eventname,data)
+    this.socket.emit(eventname, data)
   }
 
 }
